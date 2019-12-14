@@ -1,0 +1,7 @@
+# 1 - Tipos de dados
+# 2 - Pattern Matching
+# 3 - Pipe Operator
+# 4 - Criando processos concorrentes e enviando mensagens
+# 5 - Tolerância a falhas
+# 6 - Criar um app utilizando mix, rodar testes, formatar codigo, etc.
+# 7 - Aplicação sequencial vs paralela
