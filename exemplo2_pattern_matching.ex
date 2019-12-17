@@ -4,7 +4,7 @@
 # Pattern matching com estruturas
 
 defmodule Gdg do
-  def saldacao(json) do
+  def saudacao(json) do
     "#{nome_participante(json)} | #{nome_palestra(json)}"
   end
 
