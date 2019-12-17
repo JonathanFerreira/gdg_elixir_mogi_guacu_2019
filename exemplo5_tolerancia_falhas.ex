@@ -10,16 +10,6 @@ defmodule Ping do
   def start_link(_) do
     GenServer.start_link(__MODULE__, [], name: __MODULE__)
   end
-
-  def rebater(pong_pid) do
-    GenServer.call(__MODULE__, {:ping, pong_pid})
-  end
-
-  def handle_call({:ping, pong}, estado) do
-    IO.puts "" 
-    Pong.rebater
-    {:reply, nil, estado}
-  end
 end
 
 # Define o modulo Pong
@@ -48,10 +38,5 @@ defmodule Game do
     IO.puts "Inicando o jogo..."
     opts = [strategy: :one_for_one, name: Game.Supervisor]
     Supervisor.start_link(children, opts)
-  end
-
-  def jogar do
-    pong_pid = Process.whereis(Pong)
-    Ping.rebater(pong)
   end
 end
